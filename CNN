@@ -1,0 +1,29 @@
+import keras
+from keras import layers, models
+from keras.layers import Dropout, Flatten, MaxPooling2D, Conv2D
+#CNN
+#Sources: Ma3ref Courses: Machine Learning. 
+#CONV2D: extracts features
+#Maxpooling: feature selection and size reduction
+#Flattening: converts to 1D
+#Dropout: reduces overfitting by randomly disabling neurons.
+model=models.Sequential([
+    Conv2D(32,(3,3),activation='relu',input_shape=(64,64,3)), #Hidden layers
+    MaxPooling2D((2,2)),
+    Conv2D(64,(3,3),activation='relu'),
+    MaxPooling2D((2,2)),
+    Conv2D(128,(3,3),activation='relu'),
+    MaxPooling2D((2,2)),
+
+    Flatten(),
+    Dropout(0.5), #dropout by 0.5
+    layers.Dense(128,activation='relu'),#extra hidden layer
+    layers.Dense(10, activation='softmax') # Output layer 
+])
+#Activactions are subject to change depending on dataset and processed data. 
+#The person responsible for splitting data must intiliaze X_train, y_train, validation data X_test and y_test. 
+
+model.fit(X_train,y_train,epochs=n,validation_data=(X_test,y_test) #epochs will be set depending on dataset.
+    model.compile(optimizer="Adam",loss= #loss will depend on dataset,
+                  metrics="accuracy")     
+model.summary() #summarize model preformance. 
