@@ -1,4 +1,6 @@
 instructions to build the FFNN: 
+import keras from tensorflow 
+import sequential from keras models
 
 START
 
