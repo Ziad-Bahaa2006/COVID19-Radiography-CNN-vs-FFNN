@@ -1,0 +1,21 @@
+instructions to build the FFNN: 
+
+START
+
+Create Sequential model
+
+Add Dense layer
+Add ReLU activation
+
+Add Dense layer
+Add ReLU activation
+
+Add output layer
+Add Softmax/Sigmoid
+
+Compile model
+    optimizer = Adam
+    loss = CrossEntropy
+
+Train model
+
