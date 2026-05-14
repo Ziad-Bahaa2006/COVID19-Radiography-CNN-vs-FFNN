@@ -1,0 +1,3 @@
+Model,Accuracy,Precision (macro),Recall (macro),F1 (macro),F1 (weighted),AUC-ROC
+CNN  (Keras/TF),0.7823,0.8098,0.7387,0.7595,0.7723,0.9344
+FFNN (PyTorch),0.7274,0.7217,0.7017,0.7067,0.7179,0.9005
